@@ -27,7 +27,7 @@ const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users')
 
-mongoose.connect('mongodb://localhost:27017/dark-matters-multiverse', {
+mongoose.connect('mongodb://localhost:27017/yelp-camp', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -38,7 +38,7 @@ mongoose.connect('mongodb://localhost:27017/dark-matters-multiverse', {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
-    console.log('Database Connected: dark-matters-multiverse!');
+    console.log('Database Connected: yelp-camp!');
 });
 
 // Server Settings
@@ -90,7 +90,6 @@ app.get('/fakeUser', async (req, res) => {
     res.send(newUser);
 });
 
-// flagged for edit/removal
 // Express Router Paths
 app.use('/', userRoutes);
 app.use('/campgrounds', campgroundRoutes);

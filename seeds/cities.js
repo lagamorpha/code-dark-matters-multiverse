@@ -1,5 +1,3 @@
-// whole page tag
-// flagged for edit/removal
 // City Seed Bulk Data
 module.exports = [
     {

@@ -1,11 +1,9 @@
 <%layout('layouts/boilerplate')%>
 
-<!-- flagged for edit/removal -->
 <!-- Page Title -->
 <h1><%=campground.title%></h1>
 
     <div class="row">
-        <!-- flagged for edit/removal -->
         <!-- Edit Form Title -->
         <h3 class="text-center">Edit Campground</h1>
         <div class="col-6 offset-3">
@@ -15,7 +13,6 @@
                     <label for="title" class="form-label">Title</label>
                     <input class="form-control" type="text" id="title" name="campground[title]" value="<%=campground.title%>" required>
                 </div>
-                <!-- flagged for edit/removal -->
                 <!-- Location Section -->
                 <div class="mb-3">
                     <label class="form-label" for="location">Location</label>
@@ -24,7 +21,6 @@
                         Looks Good!
                     </div>
                 </div>
-                <!-- flagged for edit/removal -->
                 <!-- Price Section -->
                 <div class="mb-3">
                     <label class="form-label" for="price">Campground Price</label>
@@ -63,12 +59,10 @@
                         <label for="image-<%=i%>">Delete?</label>
                     <% }) %> 
                 </div>
-                <!-- flagged for edit/removal -->
                 <!-- Form Links -->
                 <div class="mb-3">
                     <button class="btn btn-info">Update Campground</button>
                 </div>
-                <!-- flagged for edit/removal -->
                 <!-- Page Links -->
                 <a href="/campgrounds/<%=campground._id%>">Back to Campground</a>
             </form>

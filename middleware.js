@@ -1,7 +1,6 @@
 // methods block
 const ExpressError = require('./utilities/ExpressError');
 const { campgroundSchema, reviewSchema } = require('./schemas.js');
-// flagged for edit/removal
 const Campground = require('./models/campground');
 const Review = require('./models/review');
 
@@ -17,7 +16,6 @@ module.exports.isLoggedIn = (req, res, next) => {
     next();
 }
 
-// flagged for edit/removal
 // Campground Validaton MiddleWare
 module.exports.validateCampground = (req, res, next) => {
     const { error } = campgroundSchema.validate(req.body);
@@ -32,7 +30,6 @@ module.exports.validateCampground = (req, res, next) => {
     // console.log(result);
 }
 
-// flagged for edit/removal
 // author validation route
 module.exports.isAuthor = async(req, res, next) => {
     const { id } = req.params;
@@ -45,7 +42,6 @@ module.exports.isAuthor = async(req, res, next) => {
     next();
 }
 
-// flagged for edit/removal
 // review author validation route
 module.exports.isReviewAuthor = async(req, res, next) => {
     const { id, reviewId } = req.params;
@@ -58,7 +54,6 @@ module.exports.isReviewAuthor = async(req, res, next) => {
     next();
 }
 
-// flagged for edit/removal
 // Review Validaton Middleware
 module.exports.validateReview = (req, res, next) => {
     const { error } = reviewSchema.validate(req.body);

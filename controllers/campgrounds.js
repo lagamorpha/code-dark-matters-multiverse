@@ -1,5 +1,3 @@
-// whole page tag
-// flagged for edit/removal
 // Variables Block
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const mapBoxToken = process.env.MAPBOX_TOKEN;

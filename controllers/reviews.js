@@ -1,5 +1,3 @@
-// whole page tag
-// flagged for edit/removal
 // Methods Block
 const Campground = require('../models/campground');
 const Review = require('../models/review');
