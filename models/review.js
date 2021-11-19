@@ -1,3 +1,5 @@
+// whole page tag
+// flagged for edit/removal
 // Variable Block
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;

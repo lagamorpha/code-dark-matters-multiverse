@@ -1,5 +1,9 @@
+// variable declarations
 const Joi = require('Joi');
 
+
+// flagged for edit/removal
+// campground schema declaration and export
 module.exports.campgroundSchema = Joi.object({
     campground: Joi.object({
         title: Joi.string().required(),
@@ -11,6 +15,8 @@ module.exports.campgroundSchema = Joi.object({
     deleteImages: Joi.array()
 });
 
+// flagged for edit/removal
+// review schema declaration and export statement
 module.exports.reviewSchema = Joi.object({
     review: Joi.object({
         rating: Joi.number().required().min(1).max(5),

@@ -1,3 +1,5 @@
+// whole page flag
+// flagged for edit/removal
 // Variable Block
 const mongoose = require('mongoose');
 const cities = require('./cities');

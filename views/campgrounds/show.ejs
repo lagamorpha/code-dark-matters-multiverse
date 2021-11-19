@@ -1,15 +1,18 @@
 <%layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/styles/stars.css">
 
+<!-- flagged for edit/removal -->
 <!-- Page Title -->
 <h1><%=campground.title%></h1>
 
 <div class="row">
 
+<!-- flagged for edit/removal -->
 <!-- Campgrounds Section -->
 <!-- map section -->
   <div id='map' style='width: 400px; height: 300px;'></div>
 
+<!-- flagged for edit/removal -->
   <!-- image carousel -->
   <div class="col-6">
     <div id="campgroundCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -20,6 +23,7 @@
           </div>
         <% }); %> 
       </div>
+      <!-- flagged for edit/removal -->
       <!-- carousel controls -->
       <% if(campground.images.length > 1) { %> 
         <button class="carousel-control-prev" type="button" data-bs-target="#campgroundCarousel" data-bs-slide="prev">
@@ -32,18 +36,21 @@
         </button>
       <% } %> 
     </div>
+    <!-- flagged for edit/removal -->
     <!-- Campground Card -->
     <div class="card mb-3" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><%=campground.title%></h5>
         <p class="card-text"><%=campground.description%></p>
       </div>
+      <!-- flagged for edit/removal -->
       <!-- Campground Info -->
       <ul class="list-group list-group-flush">
         <li class="list-group-item text-muted"><%=campground.location%></li>
         <li class="list-group-item">Submitted by: <%=campground.author.username%></li>
         <li class="list-group-item">$<%=campground.price%>/ Night</li>
       </ul>
+      <!-- flagged for edit/removal -->
       <!-- Campground Links -->
       <% if(currentUser && campground.author.equals(currentUser._id)) { %> 
       <div class="card-body">
@@ -59,6 +66,7 @@
     </div>
   </div>
 
+<!-- flagged for edit/removal -->
 <!-- Reviews Section -->
   <div class="col-6">
     <% if (currentUser) { %> 
@@ -66,6 +74,7 @@
     <h2>Leave a Review</h2>
     <form action="/campgrounds/<%=campground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
       <div class="mb-3">
+        <!-- flagged for edit/removal -->
         <!-- Rating Section -->
         <div class="mb-3">
           <fieldset class="starability-basic">
@@ -84,6 +93,7 @@
         </div>
       </div>
       <div class="mb-3">
+        <!-- flagged for edit/removal -->
         <!-- Review Section -->
         <label for="body">Review Text:</label>
         <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
@@ -95,16 +105,19 @@
     </form>
     <% } %> 
 
+<!-- flagged for edit/removal -->
 <!-- Review Display Subsection -->
     <% for(let review of campground.reviews) { %> 
     <div class="card mb-3">
       <div class="card-body">
+        <!-- flagged for edit/removal -->
         <!-- Display Review -->
         <h5 class="card-title"><%=review.author.username%> <%=review.rating%></h5>
         <p class="starability-result" data-rating="<%=review.rating%>">
           Rated: <%=review.rating%> stars
         </p>
         <p class="card-text">Review: <%=review.body%></p>
+        <!-- flagged for edit/removal -->
         <!-- Review Links -->
         <% if(currentUser && review.author.equals(currentUser._id)) { %> 
           <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
