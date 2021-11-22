@@ -27,7 +27,7 @@ const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users')
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+mongoose.connect('mongodb://localhost:27017/dark-matters-multiverse', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -38,7 +38,7 @@ mongoose.connect('mongodb://localhost:27017/yelp-camp', {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
-    console.log('Database Connected: yelp-camp!');
+    console.log('Database Connected: dark-matters-multiverse!');
 });
 
 // Server Settings

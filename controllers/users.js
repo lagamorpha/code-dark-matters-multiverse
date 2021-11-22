@@ -20,7 +20,7 @@ module.exports.register = async (req, res, next) => {
             if(err) return next(err);
             console.log('Registration successful, welcome to Yelp Yamp!');
             req.flash('success', `Welcome to Yelp Camp ${registeredUser.username}!`);
-            console.log(user);
+            // console.log(user);
             res.redirect('/campgrounds');
         });
     }
