@@ -1,3 +1,4 @@
+// mark for edits
 const Joi = require('Joi');
 
 module.exports.campgroundSchema = Joi.object({
